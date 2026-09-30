@@ -1,0 +1,16 @@
+.env
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.pt
+*.pth
+perception/work/
+visual-control/dataset/
+visual-control/runs/
+visual-control/output/
+llm-agent/output/
+orchestration/output/
+orchestration/screenshots/
+.ultralytics/
+.matplotlib/

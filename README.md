@@ -19,7 +19,7 @@ flowchart TD
     G --> H[Observation and logs]
     H --> I[Validation / bounded re-plan]
     I --> C
-
+```
 
 The dotted link matters: the orchestrator accepts an OCR callback but its default OCR text is a placeholder. Its simulated screenshots and validation support course demonstrations. For a real end-to-end visual pipeline, an OCR callback and model inference must be connected and tested.
 
@@ -46,7 +46,7 @@ This project was developed for Windows desktop tasks. Use Python 3.12 if possibl
 
 ```powershell
 python -m pip install -r requirements.txt
-
+```
 
 Set API credentials as environment variables. `.env.example` lists the names; the scripts read process environment variables and do **not** automatically load a `.env` file. Never commit a populated `.env`.
 
@@ -67,7 +67,7 @@ python visual-control/run_trained_yolo_demo.py
 python llm-agent/run_demo.py --scenario all --mode simulate
 $env:LLM_PROVIDER='rule'
 python orchestration/run_experiment.py --scenario all --mode simulate --loops 3
-
+```
 
 For API planning, set the three `OPENAI_*` variables and `LLM_PROVIDER=openai_compatible`. A real desktop mode is available in the two agent stages with `--mode real --confirm REAL_RUN`; use it only after checking the target screen and action sequence. `orchestration/run_real_api_task.py` is a separate controlled file-writing demonstration, not evidence that the OCR/YOLO stages are wired into the orchestrator.
 
